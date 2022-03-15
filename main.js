@@ -5,7 +5,6 @@ const redirectToSubs = () => {
 }
 
 const main = async () => {
-  console.log("Script ran");
   redirectToSubs();
 }
 
