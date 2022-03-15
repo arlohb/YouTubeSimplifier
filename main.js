@@ -7,6 +7,8 @@ const config = {
   removeShareButton: true,
   // remove the clip button
   removeClipButton: true,
+  // remove the thanks button
+  removeThanksButton: true,
   // delay between page loading and buttons removed,
   // on slower systems this may need to be increased
   // (in milliseconds)
@@ -41,6 +43,9 @@ const removeButtons = () => {
     if (config.removeClipButton && string.innerHTML === "Clip") {
       string.parentElement.parentElement.remove();
     }
+    if (config.removeThanksButton && string.innerHTML === "Thanks") {
+      string.parentElement.parentElement.remove();
+    }
   }
 }
 
@@ -49,7 +54,7 @@ const main = async () => {
 
   await sleep(config.removeButtonsDelay);
 
-  if (config.removeShareButton || config.removeClipButton) removeButtons();
+  if (config.removeShareButton || config.removeClipButton || config.removeThanksButton) removeButtons();
   if (config.removeDownloadButton) removeDownloadButton();
 }
 
