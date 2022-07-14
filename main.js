@@ -1,3 +1,5 @@
+/* https://github.com/arlohb/YouTubeSimplifier */
+
 const config = {
   // if you're on the home page, redirect to the subs page
   redirectToSubs: true,
